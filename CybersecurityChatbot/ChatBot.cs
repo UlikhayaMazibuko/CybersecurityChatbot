@@ -65,6 +65,7 @@ class ChatBot {
         Console.WriteLine(" Welcome to the Cybersecurity Awareness Bot!");
         Console.WriteLine(" I'm here to help you stay safe online.");
         Console.WriteLine();
+        Console.WriteLine(" Type 'what can I ask' to see all topics.");
         Console.ResetColor();
 
         string userName = "";
