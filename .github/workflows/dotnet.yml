@@ -1,6 +1,3 @@
-# This workflow automatically checks that your project builds
-# successfully every time you push code to GitHub
-
 name: .NET Build Check
 
 on:
@@ -11,22 +8,24 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     # Step 1: Get your code
     - uses: actions/checkout@v3
 
-    # Step 2: Set up .NET
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 6.0.x
+    # Step 2: Set up MSBuild (needed for .NET Framework projects)
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.1
 
-    # Step 3: Restore dependencies
-    - name: Restore dependencies
-      run: dotnet restore
+    # Step 3: Setup NuGet
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1
 
-    # Step 4: Build the project
-    - name: Build
-      run: dotnet build --no-restore
+    # Step 4: Restore NuGet packages
+    - name: Restore NuGet packages
+      run: nuget restore CybersecurityChatbot.sln
+
+    # Step 5: Build using MSBuild
+    - name: Build with MSBuild
+      run: msbuild CybersecurityChatbot.sln /p:Configuration=Release
