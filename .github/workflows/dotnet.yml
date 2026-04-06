@@ -14,7 +14,7 @@ jobs:
     # Step 1: Get your code
     - uses: actions/checkout@v3
 
-    # Step 2: Set up MSBuild (needed for .NET Framework projects)
+    # Step 2: Set up MSBuild
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.1
 
@@ -22,10 +22,10 @@ jobs:
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1
 
-    # Step 4: Restore NuGet packages
+    # Step 4: Restore NuGet packages using the correct path
     - name: Restore NuGet packages
-      run: nuget restore CybersecurityChatbot.sln
+      run: nuget restore CybersecurityChatbot.slnx
 
-    # Step 5: Build using MSBuild
+    # Step 5: Build using the correct path
     - name: Build with MSBuild
-      run: msbuild CybersecurityChatbot.sln /p:Configuration=Release
+      run: msbuild CybersecurityChatbot.slnx /p:Configuration=Release
