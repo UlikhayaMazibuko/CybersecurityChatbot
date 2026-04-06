@@ -163,6 +163,7 @@ class ChatBot {
 
     private void PrintBotResponse(string message) {
         Console.ForegroundColor = ConsoleColor.Magenta;
+        Console.WriteLine(" --------------------------------------------------");
         Console.WriteLine($" Bot: {message}");
         Console.ResetColor();
     }
