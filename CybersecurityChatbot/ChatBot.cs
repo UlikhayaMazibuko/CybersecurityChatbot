@@ -112,29 +112,48 @@ class ChatBot {
 
             string lowerInput = input.ToLower();
 
-            if (lowerInput == "exit" || lowerInput == "quit" || lowerInput == "bye") {
+            if (lowerInput == "exit" || lowerInput == "quit" || lowerInput == "bye")
+            {
                 PrintBotResponse($"Goodbye, {userName}! Stay safe online. Remember: think before you click!");
                 chatting = false;
             }
-            else if (lowerInput.Contains("how are you")) {
+            else if (lowerInput.Contains("how are you"))
+            {
                 PrintBotResponse("I'm doing great, thank you for asking! Ready to help you stay cyber-safe.");
             }
-            else if (lowerInput.Contains("purpose") || lowerInput.Contains("what do you do")) {
+            else if (lowerInput.Contains("purpose") || lowerInput.Contains("what do you do"))
+            {
                 PrintBotResponse("My purpose is to educate you about cybersecurity. I can help with password safety, recognising phishing, and safe browsing habits.");
             }
-            else if (lowerInput.Contains("what can") && lowerInput.Contains("ask")) {
+            else if (lowerInput.Contains("what can") && lowerInput.Contains("ask"))
+            {
                 PrintBotResponse("You can ask me about:\n  - Password safety\n  - Phishing scams\n  - Safe browsing\n  - How are you / What's your purpose");
             }
-            else if (lowerInput.Contains("password")) {
+            else if (lowerInput.Contains("password"))
+            {
                 PrintBotResponse("Password safety tip: Use at least 12 characters with a mix of letters, numbers, and symbols. Never reuse passwords across sites — use a password manager instead!");
             }
-            else if (lowerInput.Contains("phishing")) {
+            else if (lowerInput.Contains("phishing"))
+            {
                 PrintBotResponse("Phishing alert! Phishing emails pretend to be from trusted sources to steal your info. Always check the sender's email address and never click suspicious links.");
             }
-            else if (lowerInput.Contains("browsing") || lowerInput.Contains("safe browsing")) {
+            else if (lowerInput.Contains("browsing") || lowerInput.Contains("safe browsing"))
+            {
                 PrintBotResponse("Safe browsing tip: Look for 'https://' and the padlock icon before entering any personal info on a website. Avoid using public Wi-Fi for banking or shopping.");
             }
-            else {
+            else if (lowerInput.Contains("2fa") || lowerInput.Contains("two factor"))
+            {
+                PrintBotResponse("Two-Factor Authentication (2FA) adds an extra layer of security. Even if someone steals your password, they still can't access your account without the second verification step.");
+            }
+            else if (lowerInput.Contains("social engineering"))
+            {
+                PrintBotResponse("Social engineering is when attackers manipulate people into revealing confidential info. Always verify who you're speaking to before sharing any personal details.");
+            }
+            else if (lowerInput.Contains("wifi") || lowerInput.Contains("wi-fi")) {
+                PrintBotResponse("Public Wi-Fi is risky! Avoid accessing banking or personal accounts on public networks. Use a VPN if you must connect to public Wi-Fi.");
+            }
+            else
+            {
                 PrintBotResponse("I didn't quite understand that. Could you rephrase? Try asking about passwords, phishing, or safe browsing.");
             }
             Console.WriteLine();
