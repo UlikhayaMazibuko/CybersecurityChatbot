@@ -111,7 +111,7 @@ class ChatBot {
                 continue;
             }
 
-            string lowerInput = input.ToLower();
+            string lowerInput = input.Trim().ToLower();
 
             if (lowerInput == "exit" || lowerInput == "quit" || lowerInput == "bye")
             {
