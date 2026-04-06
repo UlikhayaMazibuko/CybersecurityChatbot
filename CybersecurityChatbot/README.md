@@ -65,7 +65,7 @@ that the project builds successfully.
 Build passing — see screenshot below
 
 ### Screenshot of Successful CI Run
-![CI Success](images/ci-screenshot.png)
+![CI Success](https://github.com/UlikhayaMazibuko/CybersecurityChatbot/blob/master/CybersecurityChatbot/ci%20-%20screenshot.png).
 
 
 
