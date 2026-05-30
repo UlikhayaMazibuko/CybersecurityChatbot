@@ -67,7 +67,7 @@ namespace CybersecurityChatbot_GUI
             this.PerformLayout();
         }
 
-        // These are the control declarations that match the names used in Form1.cs
+        // These are the control declarations that match the names used in Form1.cs.
         private System.Windows.Forms.RichTextBox rtbChatDisplay;
         private System.Windows.Forms.TextBox txtUserInput;
         private System.Windows.Forms.Button btnSend;
