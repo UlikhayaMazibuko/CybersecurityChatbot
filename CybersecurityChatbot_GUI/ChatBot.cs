@@ -1,4 +1,4 @@
-﻿// This class contains all the chatbot's behaviour.
+﻿// This class contains all the chatbot's behaviour
 
 using System;
 using System.Collections.Generic;
