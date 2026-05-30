@@ -41,7 +41,7 @@ class SentimentDetector
     }
 
     // This method returns an opening phrase based on the detected sentiment.
-    // It is added to the front of any response to make the bot feel empathetic.
+    // It is added to the front of any response to make the bot feel empathetic
     public static string GetSentimentPrefix(Sentiment sentiment)
     {
         switch (sentiment)
