@@ -84,8 +84,8 @@ Build passing - successful
 ## Releases
 | Version | Description |
 |---------|-------------|
-| v1.0 | Console Chatbot — Part 1 submission |
-| v2.0 | GUI Chatbot — Part 2 submission |
+| v1.0 | Console Chatbot - Part 1 submission |
+| v2.0 | GUI Chatbot - Part 2 submission |
 
 ## Commit History
 
