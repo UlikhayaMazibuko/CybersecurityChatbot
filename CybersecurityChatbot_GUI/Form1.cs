@@ -1,7 +1,7 @@
 ﻿
 // This is the main window of the Cybersecurity Awareness Chatbot GUI.
 // It handles all user interaction, displays the conversation,
-// plays the voice greeting, and coordinates with the ChatBot class.
+// plays the voice greeting, and coordinates with the ChatBot class
 
 using System;
 using System.Drawing;
